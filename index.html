@@ -1,0 +1,166 @@
+<!DOCTYPE html><html><head>
+
+  <base href="/clue_hosted/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="CLUE empowers students to thrive with personalized learning that adapts to their unique needs. Our focus on knowledge transfer and innovative experiences ensures a meaningful educational journey.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Clue">
+  <link rel="apple-touch-icon" href="icons/web-app-manifest-192x192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png" />
+
+  <title>CLUE</title>
+  <link rel="manifest" href="manifest.json">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+
+<script type="module" src="./assets/packages/model_viewer_plus/assets/model-viewer.min.js" defer=""></script>
+  
+  
+  
+  <style id="splash-screen-style">
+    html {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #ffffff;
+          background-size: 100% 100%;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .contain {
+      display:block;
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    .stretch {
+      display:block;
+      width:100%; height:100%;
+    }
+
+    .cover {
+      display:block;
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .bottomLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #000000;
+          }
+    }
+  </style>
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      document.getElementById("splash")?.remove();
+      document.getElementById("splash-branding")?.remove();
+      document.body.style.background = "transparent";
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          /* Organization Schema for "Centre for Learning, Upskilling and Excellence" (CLUE) */
+          "@type": "Organization",
+          "@id": "https://www.myclue.org/#organization",
+          "name": "CLUE",
+          "legalName": "Centre for Learning, Upskilling and Excellence",
+          "url": "https://www.myclue.org/",
+          "logo": "https://firebasestorage.googleapis.com/v0/b/nmpts-backend.appspot.com/o/clue-logo.png?alt=media&token=4e334dc9-3beb-482f-858f-c3933a6d7035",
+          "description": "We at CLUE, believe that education is the transfer of knowledge between people, increasing our combined skillset and intellectual capacity.",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91 9220372444",
+            "email": "clueadmin@myclue.org",
+            "contactType": "customer service"
+          },
+          "sameAs": [
+            "https://www.instagram.com/my_clue_/"
+          ]
+        },
+        {
+          /* SoftwareApplication Schema for the CLUE Learning Platform/App */
+          "@type": "SoftwareApplication",
+          "@id": "https://www.myclue.org/#softwareapplication",
+          "name": "CLUE Learning Platform",
+          "operatingSystem": "Web", 
+          "applicationCategory": "EducationalApplication",
+          "url": "https://www.myclue.org/",
+          "image": "https://firebasestorage.googleapis.com/v0/b/nmpts-backend.appspot.com/o/seo_cover.png?alt=media&token=a44a5edc-ea42-4d5d-8ce6-f7ef8fa713c3",
+          "publisher": {
+            "@id": "https://www.myclue.org/#organization"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.5",
+            "reviewCount": "730",
+            "bestRating": "5"
+          }
+        }
+      ]
+    }
+    </script>
+</head>
+
+<body>
+  <picture id="splash">
+      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+  </picture>
+
+
+  <script src="flutter_bootstrap.js" async="">
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('firebase-messaging-sw.js', {
+          scope: '/firebase-cloud-messaging-push-scope',
+        });
+      });
+    }
+  </script>
+
+</body></html>
